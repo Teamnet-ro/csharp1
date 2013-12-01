@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace _06.LambdaExpressions
@@ -44,7 +45,6 @@ namespace _06.LambdaExpressions
             };
 
             Console.WriteLine(multiply("Nu", 7));
-
             return;
 
             var actions = new Action[3];
@@ -73,6 +73,14 @@ namespace _06.LambdaExpressions
             {
                 a();
             }
+        }
+
+        static void OtherFunction()
+        {
+            Expression<Func<int>> funcExpression = () =>
+                new Object().GetHashCode();
+
+            Console.WriteLine(funcExpression.Body);
         }
     }
 }
