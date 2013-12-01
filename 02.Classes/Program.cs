@@ -14,6 +14,17 @@ namespace Classes
             var normalObject = new NormalClass("vaca");
 
             normalObject.PrintValues();
+
+            AdvancedClass.PrintHowManyInstances();
+            var advancedObject = new AdvancedClass();
+            AdvancedClass.PrintHowManyInstances();
+
+            advancedObject.PrintValues();
+            var advancedCopy = (AdvancedClass)advancedObject.Clone();
+            advancedCopy.PrintValues();
+
+            advancedCopy.Dispose();
+            advancedObject.Dispose();
         }
     }
 }
