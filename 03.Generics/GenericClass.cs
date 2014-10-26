@@ -14,15 +14,14 @@ namespace Generics
         }
 
         // metodele pot introduce type parameters noi
-        public void MoreGenericMethod<TComponent>(
-            T otherValue,
-            TComponent component)
-            where TComponent : Component
+        public void MoreGenericMethod<TOther>(
+            T aValue,
+            TOther otherValue)
         {
             Console.WriteLine(
                 "{0} și {1}",
-                otherValue,
-                component.Site);
+                aValue,
+                otherValue);
         }
 
         public GenericClass(T value)

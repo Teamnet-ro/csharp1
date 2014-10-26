@@ -15,6 +15,11 @@
             // no need to specify type parameters
             var instanceWithFloat = GenericClass.Create(1.23);
             instanceWithFloat.SomeMethod();
+
+            // call MoreGenericMethod with various other types
+            instanceWithInt.MoreGenericMethod(333, 1);
+            instanceWithInt.MoreGenericMethod(333, "hopa");
+            instanceWithInt.MoreGenericMethod(333, 0.001);
         }
     }
 }
