@@ -13,7 +13,8 @@ namespace Syntax
 
     class MyClass
     {
-        private int a;
+        // fields are automatically initialized to zero / null
+        int a;
 
         internal void PrintA()
         {
