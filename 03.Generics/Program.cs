@@ -1,4 +1,6 @@
-﻿namespace Generics
+﻿using System;
+
+namespace Generics
 {
     class Program
     {
@@ -20,6 +22,12 @@
             instanceWithInt.MoreGenericMethod(333, 1);
             instanceWithInt.MoreGenericMethod(333, "hopa");
             instanceWithInt.MoreGenericMethod(333, 0.001);
+
+            // non-generic classes can have generic methods
+            var nonGenericInstance = new NonGenericClass();
+            nonGenericInstance.GenericMethod(3);
+            nonGenericInstance.GenericMethod(Math.PI);
+            nonGenericInstance.GenericMethod("π");
         }
     }
 }
