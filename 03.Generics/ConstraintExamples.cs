@@ -10,6 +10,7 @@ namespace Generics
         public static void InterfaceConstraint<T>(T something)
             where T : IDisposable
         {
+            Console.WriteLine("disposing argument");
             something.Dispose();
         }
 

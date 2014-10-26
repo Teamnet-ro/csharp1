@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Generics
 {
@@ -28,6 +29,8 @@ namespace Generics
             nonGenericInstance.GenericMethod(3);
             nonGenericInstance.GenericMethod(Math.PI);
             nonGenericInstance.GenericMethod("π");
+
+            ConstraintExamples.InterfaceConstraint(new MemoryStream());
         }
     }
 }
