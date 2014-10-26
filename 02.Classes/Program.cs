@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Classes
 {
@@ -24,6 +21,8 @@ namespace Classes
             advancedObject.PrintValues();
             var advancedCopy = (AdvancedClass)advancedObject.Clone();
             advancedCopy.PrintValues();
+
+            AdvancedClass.PrintHowManyInstances();
 
             advancedCopy.Dispose();
             advancedObject.Dispose();

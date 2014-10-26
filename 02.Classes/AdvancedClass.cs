@@ -6,13 +6,17 @@ namespace Classes
     internal class AdvancedClass:
         NormalClass, ICloneable, IDisposable
     {
+        // static: shared by all instances
         private static int howManyInstances;
 
+        // static constructor: runs only once per process,
+        // before any class member is accessed the first time
         static AdvancedClass()
         {
             howManyInstances = 0;
         }
 
+        // static method: can be called without creating an instance of the class
         public static void PrintHowManyInstances()
         {
             Console.WriteLine(
@@ -23,7 +27,7 @@ namespace Classes
             // ar trebui să adăugăm clasei un finalizer
         }
 
-        // event
+        // event: will explain later
         public event EventHandler CatLeft;
 
         public string this[int index]

@@ -55,7 +55,7 @@ namespace Classes
     class OtherDerivedClass : BaseClass
     {
         // suprascrie metoda virtuală, apelează și
-        // metoda suprascrisă
+        // metoda din clasa de bază
         protected override void PrintMessageWithDefault()
         {
             base.PrintMessageWithDefault();
