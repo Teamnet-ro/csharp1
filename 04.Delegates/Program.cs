@@ -8,12 +8,14 @@ namespace Delegates
         {
             var instance = new MyClass();
 
+            // can refer an instance method
             MyDelegate stringInspector = instance.CountCharacters;
-            // apelat ca o funcție, are un singură metodă
+            // apelat ca o funcție; are un singură metodă
             stringInspector("Vasile");
 
+            // can refer static methods
             stringInspector += MyClass.PrintBeginning;
-            // apelat cu Invoke, are două funcții
+            // apelat cu Invoke; are două funcții
             stringInspector.Invoke("Cozonac");
 
             stringInspector -= instance.CountCharacters;
@@ -27,6 +29,14 @@ namespace Delegates
                 }, null);
 
             Console.ReadKey(true);
+
+            // can create anonymous delegates
+            stringInspector += delegate (string s)
+            {
+                Console.WriteLine("„{0}” has {1} characters", s, s.Length);
+            };
+
+            stringInspector("masonerie");
 
             // delegați pre-definiți
             // are un parametru int
