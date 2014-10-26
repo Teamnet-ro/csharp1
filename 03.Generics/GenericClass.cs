@@ -30,4 +30,14 @@ namespace Generics
             this.value = value;
         }
     }
+
+    // this is a different class from GenericClass, it just happens to have
+    // the same name.
+    static class GenericClass
+    {
+        internal static GenericClass<T> Create<T>(T value)
+        {
+            return new GenericClass<T>(value);
+        }
+    }
 }
