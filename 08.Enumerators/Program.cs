@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _08.Enumerators
 {
@@ -28,6 +29,23 @@ namespace _08.Enumerators
             foreach (var dwarf in collections.TheSevenDwarves())
             {
                 Console.WriteLine("Here comes {0}", dwarf);
+            }
+
+            var fibonacci = collections.Fibonacci();
+            var firstFibonacci = collections.FirstTwelve(fibonacci);
+            foreach (var n in firstFibonacci)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.WriteLine("------------------------------------------");
+
+            var newFibonacci = collections.Fibonacci();
+            var evenFibonacci = collections.OnlyEven(newFibonacci);
+            var firstEvenFibonacci = collections.FirstTwelve(evenFibonacci);
+            foreach (var n in firstEvenFibonacci)
+            {
+                Console.WriteLine(n);
             }
         }
     }
