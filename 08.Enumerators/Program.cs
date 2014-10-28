@@ -14,10 +14,13 @@ namespace _08.Enumerators
                 Console.WriteLine(number);
             }
 
-            var enumerator = list.GetEnumerator();
-            while (enumerator.MoveNext())
+            using (var enumerator = list.GetEnumerator())
             {
-                Console.WriteLine(enumerator.Current);
+                while (enumerator.MoveNext())
+                {
+                    int number = enumerator.Current;
+                    Console.WriteLine(number);
+                }
             }
         }
     }
