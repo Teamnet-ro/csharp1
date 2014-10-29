@@ -14,9 +14,9 @@ namespace _10.Linq
 
             var numbers = Enumerable.Range(1, 20);
 
-            numbers = numbers.Where(number => number % 3 == 0);
+            var tripleNumbers = numbers.Where(number => number % 3 == 0);
 
-            var numberNames = numbers.Select(number => number.ToWords());
+            var numberNames = tripleNumbers.Select(number => number.ToWords());
 
             foreach (var numberName in numberNames)
             {
@@ -33,6 +33,22 @@ namespace _10.Linq
             {
                 Console.WriteLine(numberName);
             }
+
+            Console.WriteLine("order ------------------------------------------------------");
+
+            var numberNames3 = from number in numbers
+                               where number % 2 == 0
+                               select new { number, name = number.ToWords() };
+
+            var orderedNames = from numberName in numberNames3
+                               orderby numberName.name
+                               select numberName.number;
+            // or: numberNames3.OrderBy(nn => nn.name)
+
+            foreach (var number in orderedNames)
+            {
+                Console.WriteLine(number);
+            }  
         }
     }
 }
