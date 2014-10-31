@@ -8,6 +8,8 @@ namespace _06.LambdaExpressions
     {
         static void Main(string[] args)
         {
+            OtherFunction();
+            return;
             // nici un parametru
             Action action = () => Console.WriteLine("vaca");
             // un parametru
@@ -33,7 +35,7 @@ namespace _06.LambdaExpressions
             Console.WriteLine(func);
 
             // pot fi explicit în legătură cu tipul parametrilor
-            Func<string, int, string> multiply = (string s, int n) =>
+            Func<string, int, string> multiply = (s, n) =>
             {
                 var result = new StringBuilder();
                 for (int j = 0; j < n; j++)
@@ -45,7 +47,7 @@ namespace _06.LambdaExpressions
             };
 
             Console.WriteLine(multiply("Nu", 7));
-            return;
+            //return;
 
             var actions = new Action[3];
             for (int j = 0; j < 3; j++)
@@ -59,7 +61,7 @@ namespace _06.LambdaExpressions
                 a();
             }
 
-            return;
+            //return;
 
             var otherActions = new Action[3];
             var index = 0;

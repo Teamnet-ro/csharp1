@@ -34,6 +34,8 @@ namespace Delegates
             // are un parametru int, unul string
             Action<int, string> action2;
 
+            Action action3;
+
             // returnează un întreg
             Func<int> func1;
             // are un parametru string, returnează un int

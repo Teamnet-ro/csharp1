@@ -26,6 +26,7 @@ namespace Classes
         // event
         public event EventHandler CatLeft;
 
+        // indexer
         public string this[int index]
         {
             get

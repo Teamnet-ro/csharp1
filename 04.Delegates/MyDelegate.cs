@@ -1,4 +1,6 @@
-﻿namespace Delegates
+﻿using System;
+
+namespace Delegates
 {
     // nu pot moșteni direct din Delegate
     //internal class MyDelegate : Delegate{}
@@ -6,7 +8,7 @@
     // nu pot moșteni direct din MulticastDelegate
     //internal class MyDelegate : MulticastDelegate{}
 
-    delegate void MyDelegate(string s);
+    public delegate void MyDelegate(string s);
 
     delegate int MyNonVoidDelegate(string s);
 
